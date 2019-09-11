@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.gamePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="140"></RowDefinition>
+                    <RowDefinition Height="25"></RowDefinition>
+                    <RowDefinition Height="25"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="15"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Image x:Name="image" Source="hangman1.png" Grid.Row="0" BindingContext="image"></Image>
+                <Label x:Name="Guessed" Text="" Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="Black"></Label>
+                <Label x:Name="Missed" Text="" Grid.Row="2" HorizontalTextAlignment="Center" FontSize="Small" TextColor="Black"></Label>
+                <Entry x:Name="entry" Text="" Grid.Row="3" HorizontalTextAlignment="Center" FontSize="Small" BackgroundColor="Gray"></Entry>
+                <Label x:Name="null_alert" Text="Add letter" HorizontalTextAlignment="Center" TextColor="Red" IsVisible="True" Grid.Row="4" FontSize="Micro"></Label>
+                <Label x:Name="bad_characters" Text="Only one letter can be written" HorizontalTextAlignment="Center"  IsVisible="False" TextColor="Red" Grid.Row="4" FontSize="Micro"></Label>
+                <Button x:Name="add_letter" Text="Add letter" Grid.Row="5" Clicked="Add_letter_Clicked"></Button>
+                <Button Text="Menu" Grid.Row="6" Clicked="Button_Clicked1"></Button>
+                
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
